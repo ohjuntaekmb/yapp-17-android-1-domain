@@ -1,3 +1,5 @@
+package domain;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -6,18 +8,18 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PostTest {
 
-    private static final double LAT = 27.0000001;
-    private static final double LNG = 152.000001;
-    private static final String ADDRESS = "서울시 강남구";
-    private static final String CONTENT = "글내용";
-    private static final String CITY = "서울특별시";
-    private static final LocalDate CREATE_DATE = LocalDate.of(1993, 8, 25);
+    static final double LAT = 27.0000001;
+    static final double LNG = 152.000001;
+    static final String ADDRESS = "서울시 강남구";
+    static final String CONTENT = "글내용";
+    static final String CITY = "서울특별시";
+    static final LocalDate CREATE_DATE = LocalDate.of(1993, 8, 25);
 
-    public static final String POST_IMAGE_URL = "https://example.com/";
+    static final String POST_IMAGE_URL = "https://example.com/";
 
     @Test
     @DisplayName("게시글 생성 및 조회 테스트")

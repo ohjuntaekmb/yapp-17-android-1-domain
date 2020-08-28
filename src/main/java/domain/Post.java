@@ -1,3 +1,5 @@
+package domain;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +32,7 @@ public class Post {
     }
 
     @Override public String toString() {
-        return "Post{" +
+        return "domain.Post{" +
                 "point=" + point +
                 ", address='" + address + '\'' +
                 ", content='" + content + '\'' +

@@ -1,3 +1,5 @@
+package domain;
+
 public class Point {
     private final double lat;
     private final double lng;
@@ -30,7 +32,7 @@ public class Point {
     }
 
     @Override public String toString() {
-        return "Point{" +
+        return "domain.Point{" +
                 "lat=" + lat +
                 ", lng=" + lng +
                 '}';
