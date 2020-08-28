@@ -37,3 +37,9 @@
 
 - (__point__, address, __[postImage]__, content, city, createDate) 
 - [x] 게시글 생성 테스트
+- [x] 게시글을 생성할 때 여러 개의 사진을 달 수 있다.
+
+### PostImage
+
+- (url)
+- [x] 사진 생성 테스트
