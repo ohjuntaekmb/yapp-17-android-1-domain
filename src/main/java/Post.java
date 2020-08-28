@@ -28,4 +28,14 @@ public class Post {
         this.postImages = postImages;
         return this.postImages;
     }
+
+    @Override public String toString() {
+        return "Post{" +
+                "point=" + point +
+                ", address='" + address + '\'' +
+                ", content='" + content + '\'' +
+                ", city='" + city + '\'' +
+                ", createDate=" + createDate +
+                '}';
+    }
 }

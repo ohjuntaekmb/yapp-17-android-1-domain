@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PostTest {
@@ -14,12 +15,12 @@ class PostTest {
     private static final String ADDRESS = "서울시 강남구";
     private static final String CONTENT = "글내용";
     private static final String CITY = "서울특별시";
-    private static final LocalDate CREATE_DATE = LocalDate.now();
+    private static final LocalDate CREATE_DATE = LocalDate.of(1993, 8, 25);
 
     public static final String POST_IMAGE_URL = "https://example.com/";
 
     @Test
-    @DisplayName("게시글 생성 테스트")
+    @DisplayName("게시글 생성 및 조회 테스트")
     void createTest() {
         Post post = new Post(new Point(LAT, LNG),
                 ADDRESS,
@@ -27,7 +28,9 @@ class PostTest {
                 CITY,
                 CREATE_DATE);
 
-        assertNotNull(post);
+
+        assertThat(post.toString()).contains(String.valueOf(LAT), String.valueOf(LNG), ADDRESS, CONTENT, CITY, CREATE_DATE.toString());
+
     }
 
     @Test

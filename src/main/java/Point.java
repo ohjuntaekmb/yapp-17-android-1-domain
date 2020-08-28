@@ -28,4 +28,11 @@ public class Point {
             throw new IllegalArgumentException("7자리의 소수점을 입력해주세요.");
         }
     }
+
+    @Override public String toString() {
+        return "Point{" +
+                "lat=" + lat +
+                ", lng=" + lng +
+                '}';
+    }
 }
